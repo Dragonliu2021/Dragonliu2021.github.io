@@ -18,17 +18,17 @@
   
   
   <title>贪心算法 | Dragon&#39;s Algorithm Blogs</title>
-  <meta name="description" content="1 简介 贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。  2 适用范围 贪心算法在有最优子结构的问题中尤为有效。最优子结构的">
+  <meta name="description" content="1 简介贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。 2 适用范围贪心算法在有最优子结构的问题中尤为有效。最优子结构的意思是问">
 <meta property="og:type" content="article">
 <meta property="og:title" content="贪心算法">
 <meta property="og:url" content="https://dragonliu2021.github.io/2022/04/19/贪心算法/index.html">
 <meta property="og:site_name" content="Dragon Liu">
-<meta property="og:description" content="1 简介 贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。  2 适用范围 贪心算法在有最优子结构的问题中尤为有效。最优子结构的">
+<meta property="og:description" content="1 简介贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。 2 适用范围贪心算法在有最优子结构的问题中尤为有效。最优子结构的意思是问">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2022-04-19T05:32:02.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="贪心算法">
-<meta name="twitter:description" content="1 简介 贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。  2 适用范围 贪心算法在有最优子结构的问题中尤为有效。最优子结构的">
+<meta name="twitter:description" content="1 简介贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。 2 适用范围贪心算法在有最优子结构的问题中尤为有效。最优子结构的意思是问">
   <!-- Canonical links -->
   <link rel="canonical" href="https://dragonliu2021.github.io/2022/04/19/贪心算法/index.html">
   
@@ -323,7 +323,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介"><span class="toc-number">1.</span> <span class="toc-text"> 1 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-适用范围"><span class="toc-number">2.</span> <span class="toc-text"> 2 适用范围</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-证明方法"><span class="toc-number">3.</span> <span class="toc-text"> 3 证明方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-与动态规划的区别"><span class="toc-number">4.</span> <span class="toc-text"> 4 与动态规划的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-解题"><span class="toc-number">5.</span> <span class="toc-text"> 5 解题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#51-常见题型"><span class="toc-number">5.1.</span> <span class="toc-text"> 5.1 常见题型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-排序解法"><span class="toc-number">5.2.</span> <span class="toc-text"> 5.2 排序解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53-后悔解法"><span class="toc-number">5.3.</span> <span class="toc-text"> 5.3 后悔解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54-注意"><span class="toc-number">5.4.</span> <span class="toc-text"> 5.4 注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-参考"><span class="toc-number">6.</span> <span class="toc-text"> 6 参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-题目列表"><span class="toc-number">7.</span> <span class="toc-text"> 7 题目列表</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介"><span class="toc-number">1.</span> <span class="toc-text">1 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-适用范围"><span class="toc-number">2.</span> <span class="toc-text">2 适用范围</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-证明方法"><span class="toc-number">3.</span> <span class="toc-text">3 证明方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-与动态规划的区别"><span class="toc-number">4.</span> <span class="toc-text">4 与动态规划的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-解题"><span class="toc-number">5.</span> <span class="toc-text">5 解题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-常见题型"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 常见题型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-排序解法"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 排序解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-后悔解法"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 后悔解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-注意"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-参考"><span class="toc-number">6.</span> <span class="toc-text">6 参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-题目列表"><span class="toc-number">7.</span> <span class="toc-text">7 题目列表</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/04/19/贪心算法/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 842(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 834(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -379,41 +379,31 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="1-简介"><a class="markdownIt-Anchor" href="#1-简介"></a> 1 简介</h1>
-<p>贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。</p>
+        <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><p>贪心算法（英语：greedy algorithm），是用计算机来模拟一个“贪心”的人做出决策的过程。这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。</p>
 <p>可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。</p>
-<h1 id="2-适用范围"><a class="markdownIt-Anchor" href="#2-适用范围"></a> 2 适用范围</h1>
-<p>贪心算法在有最优子结构的问题中尤为有效。最优子结构的意思是问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。</p>
-<h1 id="3-证明方法"><a class="markdownIt-Anchor" href="#3-证明方法"></a> 3 证明方法</h1>
-<p>贪心算法有两种证明方法：反证法和归纳法。一般情况下，一道题只会用到其中的一种方法来证明。</p>
+<h1 id="2-适用范围"><a href="#2-适用范围" class="headerlink" title="2 适用范围"></a>2 适用范围</h1><p>贪心算法在有最优子结构的问题中尤为有效。最优子结构的意思是问题能够分解成子问题来解决，子问题的最优解能递推到最终问题的最优解。</p>
+<h1 id="3-证明方法"><a href="#3-证明方法" class="headerlink" title="3 证明方法"></a>3 证明方法</h1><p>贪心算法有两种证明方法：反证法和归纳法。一般情况下，一道题只会用到其中的一种方法来证明。</p>
 <ol>
 <li><strong>反证法</strong>：如果交换方案中任意两个元素/相邻的两个元素后，答案不会变得更好，那么可以推定目前的解已经是最优解了。</li>
-<li><strong>归纳法</strong>：先算出边界情况（例如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span> ）的最优解<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">F_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，然后再证明：对于每个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">F_{n+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.891661em;vertical-align:-0.208331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 都可以由<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>F</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">F_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>推导出结果。</li>
+<li><strong>归纳法</strong>：先算出边界情况（例如$n=1$ ）的最优解$F<em>1$，然后再证明：对于每个$n$，$F</em>{n+1}$ 都可以由$F_n$推导出结果。</li>
 </ol>
-<h1 id="4-与动态规划的区别"><a class="markdownIt-Anchor" href="#4-与动态规划的区别"></a> 4 与动态规划的区别</h1>
-<ul>
+<h1 id="4-与动态规划的区别"><a href="#4-与动态规划的区别" class="headerlink" title="4 与动态规划的区别"></a>4 与动态规划的区别</h1><ul>
 <li><strong>贪心算法</strong>：对每个子问题的解决方案都做出选择，不能回退。</li>
 <li><strong>动态规划</strong>：则会保存以前的运算结果，并根据以前的结果对当前进行选择，有回退功能。</li>
 </ul>
-<h1 id="5-解题"><a class="markdownIt-Anchor" href="#5-解题"></a> 5 解题</h1>
-<h2 id="51-常见题型"><a class="markdownIt-Anchor" href="#51-常见题型"></a> 5.1 常见题型</h2>
-<p>在提高组难度以下的题目中，最常见的贪心有两种。</p>
+<h1 id="5-解题"><a href="#5-解题" class="headerlink" title="5 解题"></a>5 解题</h1><h2 id="5-1-常见题型"><a href="#5-1-常见题型" class="headerlink" title="5.1 常见题型"></a>5.1 常见题型</h2><p>在提高组难度以下的题目中，最常见的贪心有两种。</p>
 <ul>
 <li>「我们将 XXX 按照某某顺序排序，然后按某种顺序（例如从小到大）选择。」。</li>
 <li>「我们每次都取 XXX 中最大/小的东西，并更新 XXX。」（有时「XXX 中最大/小的东西」可以优化，比如用优先队列维护）</li>
 </ul>
 <p>二者的区别在于一种是离线的，先处理后选择；一种是在线的，边处理边选择。</p>
-<h2 id="52-排序解法"><a class="markdownIt-Anchor" href="#52-排序解法"></a> 5.2 排序解法</h2>
-<p>用排序法常见的情况是输入一个包含几个（一般一到两个）权值的数组，通过排序然后遍历模拟计算的方法求出最优值。</p>
-<h2 id="53-后悔解法"><a class="markdownIt-Anchor" href="#53-后悔解法"></a> 5.3 后悔解法</h2>
-<p>思路是无论当前的选项是否最优都接受，然后进行比较，如果选择之后不是最优了，则反悔，舍弃掉这个选项；否则，正式接受。如此往复。</p>
-<h2 id="54-注意"><a class="markdownIt-Anchor" href="#54-注意"></a> 5.4 注意</h2>
-<p><strong>预处理</strong>：在处理数组前，统计一遍信息（如频率、个数、第一次出现位置、最后一次出现位置等）可以使题目难度大幅降低。</p>
-<h1 id="6-参考"><a class="markdownIt-Anchor" href="#6-参考"></a> 6 参考</h1>
-<ul>
+<h2 id="5-2-排序解法"><a href="#5-2-排序解法" class="headerlink" title="5.2 排序解法"></a>5.2 排序解法</h2><p>用排序法常见的情况是输入一个包含几个（一般一到两个）权值的数组，通过排序然后遍历模拟计算的方法求出最优值。</p>
+<h2 id="5-3-后悔解法"><a href="#5-3-后悔解法" class="headerlink" title="5.3 后悔解法"></a>5.3 后悔解法</h2><p>思路是无论当前的选项是否最优都接受，然后进行比较，如果选择之后不是最优了，则反悔，舍弃掉这个选项；否则，正式接受。如此往复。</p>
+<h2 id="5-4-注意"><a href="#5-4-注意" class="headerlink" title="5.4 注意"></a>5.4 注意</h2><p><strong>预处理</strong>：在处理数组前，统计一遍信息（如频率、个数、第一次出现位置、最后一次出现位置等）可以使题目难度大幅降低。  </p>
+<h1 id="6-参考"><a href="#6-参考" class="headerlink" title="6 参考"></a>6 参考</h1><ul>
 <li><a href="https://oi-wiki.org/basic/greedy/#_3" target="_blank" rel="noopener">OI-wiki</a></li>
 </ul>
-<h1 id="7-题目列表"><a class="markdownIt-Anchor" href="#7-题目列表"></a> 7 题目列表</h1>
+<h1 id="7-题目列表"><a href="#7-题目列表" class="headerlink" title="7 题目列表"></a>7 题目列表</h1><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -471,10 +461,10 @@
 <tr>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
-<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>

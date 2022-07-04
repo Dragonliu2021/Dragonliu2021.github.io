@@ -252,13 +252,6 @@
   </url>
   
   <url>
-    <loc>https://dragonliu2021.github.io/tags/%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dragonliu2021.github.io/tags/STL/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,7 +259,7 @@
   </url>
   
   <url>
-    <loc>https://dragonliu2021.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
+    <loc>https://dragonliu2021.github.io/tags/%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -280,7 +273,7 @@
   </url>
   
   <url>
-    <loc>https://dragonliu2021.github.io/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://dragonliu2021.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -315,6 +308,13 @@
   </url>
   
   <url>
+    <loc>https://dragonliu2021.github.io/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://dragonliu2021.github.io/tags/%E6%AC%A7%E6%8B%89%E8%B7%AF/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://dragonliu2021.github.io/categories/08-%E5%9B%BE%E8%AE%BA/</loc>
+    <loc>https://dragonliu2021.github.io/categories/02-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -345,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://dragonliu2021.github.io/categories/02-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://dragonliu2021.github.io/categories/08-%E5%9B%BE%E8%AE%BA/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
